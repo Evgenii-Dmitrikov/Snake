@@ -46,6 +46,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Screen.autorotateToPortrait = true;
+        Screen.autorotateToPortraitUpsideDown = true;
+        Screen.autorotateToLandscapeLeft = false;
+        Screen.autorotateToLandscapeRight = false;
+
+        Screen.orientation = ScreenOrientation.AutoRotation;
+
         Segments = new Queue<GameObject>();
         Current = this;
         nextSpawn = startSegment.transform.position.z;
